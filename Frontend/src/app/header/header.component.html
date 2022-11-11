@@ -1,0 +1,45 @@
+  <mat-toolbar color="primary">
+  <mat-toolbar-row >
+    <button mat-icon-button color="accent" (click)="sidenav.toggle()" >
+    <mat-icon style="color:white;" aria-label="sidenav.toggle();">menu </mat-icon>
+    </button>
+    <br>
+    <img src="./assets/pizza.jpeg" alt="img">
+    <span >BCA PIZZAWALA</span> 
+    
+    <input class="form-control form-control-sm mr-3 w-40" type="text" style="margin-left: 760px; height: 20px; width: 100px; "
+     placeholder=" s e a r c h " aria-label="Search" matInput>
+    <button mat-icon-button >
+    <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button style="  margin-left: 8px;" routerLink="login"  routerLinkActive="Active">
+    <mat-icon>power_settings_new</mat-icon> logout
+    </button>
+    <button mat-icon-button  aria-label="Example icon-button with a menu" style="margin-left: 45px; margin-top: 10px;"  >
+    <a href="dialog"> <mat-icon  matTooltip="Manage Profile">fastfood</mat-icon></a>
+    <button mat-button></button>
+    </button>
+   
+  </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container > 
+  <mat-sidenav #sidenav opened="false" [mode]="(isHandset$ | async) ? 'over' : 'side'" 
+      style="  background-color: rgb(0,100,145);">
+      <mat-nav-list style="width:150px; min-height:100px;" >
+      <br><br>
+      <button mat-button color="warn" routerLink="login"  routerLinkActive="Active" style="color: white; margin-left: 20px;" >
+        <mat-icon>lock_open</mat-icon> LOG IN
+      </button>
+      <br><br>
+      <button mat-button color="warn" routerLink="registation"  routerLinkActive="Active" style="color: white; margin-left: 20px;">
+        <mat-icon>attachment</mat-icon> SIGN IN
+      </button> 
+      </mat-nav-list>   
+      </mat-sidenav>
+      <mat-sidenav-content><br>
+      <div style="height: 70%; background-color :rgb(255, 255, 255);">
+      <router-outlet></router-outlet>
+      </div> 
+ </mat-sidenav-content> 
+ </mat-sidenav-container> 

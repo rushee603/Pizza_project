@@ -1,0 +1,29 @@
+.example-card {
+    max-width: 370px;
+  }
+
+  mat-hint {
+    color: rgba(255, 0, 0, 0.664);
+  }
+  mat-error{
+      color: red;
+  }
+  mat-card {
+    margin-top: 60px;
+    margin-left:650px;
+    /* margin-top: 80px; */
+    background-color:rgba(255, 255, 255, 0.568);
+    max-height: 300px;
+
+  }
+
+  mat-card-content{
+
+    margin-left:40px;
+    width: 300px;
+    
+  }
+  mat-form-field{
+    width: 300px;
+  }
+

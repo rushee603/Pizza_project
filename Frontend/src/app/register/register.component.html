@@ -1,0 +1,52 @@
+<body style=" background-image: url('./assets/background.jpg'); height: 150%; width: 100%; margin-top: -50px;">
+
+    <br><br><br><br><br>
+    <div style="align-items: center;">
+    <mat-card class="example-card">
+    <mat-card-title></mat-card-title>
+    <mat-card-content>
+        <div>
+        <h2>REGISTER FORM</h2><hr><br>
+        <h3>
+            <form [formGroup]="registration" action="">
+                <mat-form-field appearance="fill">
+                <mat-label>Email Id</mat-label>
+                <input matInput type="email" formControlName="email">
+                <mat-hint *ngIf="!email?.valid&& email?.dirty">Invalid Email</mat-hint>
+                </mat-form-field>
+                &nbsp;
+                <mat-form-field appearance="fill">
+                <mat-label>UserId</mat-label>
+                <input matInput type="useriId" formControlName="userId">               
+                <mat-hint *ngIf="!password?.valid&& userId?.dirty">Invalid userId</mat-hint>                   
+                </mat-form-field>
+                &nbsp;
+                <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input  matInput type="password" formControlName="password"> 
+                    <mat-hint *ngIf="!password?.valid&& password?.dirty">Must Be 5-10 Letter</mat-hint>
+                    <br> <mat-hint *ngIf="!password?.valid&& password?.dirty">Invalid password</mat-hint>  
+                    </mat-form-field> &nbsp;
+                    <mat-form-field appearance="fill">
+                    <mat-label> Confirm Password</mat-label>
+                    <input  matInput type="password" formControlName="cpassword"> 
+                    <mat-hint *ngIf="!password?.valid&& password?.dirty">Invalid password</mat-hint>
+                    </mat-form-field> 
+                    <mat-form-field appearance="fill" style=" width: 420px;">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput formControlName="phoneNumber"> 
+                    <mat-hint *ngIf="!phoneNumber?.valid&& phoneNumber?.dirty">Invalid phoneNumber</mat-hint>
+                    </mat-form-field><br>
+                    <mat-form-field  appearance="fill" style="width: 420px;">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput placeholder="address" formControlName="address"></textarea>
+                    <mat-hint *ngIf="!address?.valid&& address?.dirty">Can't Be Empty</mat-hint>
+                    </mat-form-field><br>
+                    <input type="submit" value="REGISTER" (click)="submit()" [disabled]="registration.invalid || !(registration.value.password==registration.value.cpassword)"/>
+                    </form>
+                    </h3>
+                </div>
+            </mat-card-content>
+            </mat-card>
+            </div>
+        </body>

@@ -1,0 +1,18 @@
+<body>
+    
+<div>
+<mat-card class="example-card" style="width: 250px; background-color:rgba(250, 246, 246, 0.726);">
+    <mat-card-header>    
+    <mat-card-title style="margin-left:40px ;">{{p.pizzaName}}</mat-card-title>    
+    </mat-card-header>
+    <!-- <app-img [image]="p.img"></app-img><hr> -->
+    <mat-card-content>
+    <h2 style="color:rgb(0,100,145);">ID: {{p.pizzaId}}</h2>
+    <span style="color:rgb(0,100,145);">PRICE:₹{{p.price}}</span><br><br>
+    <span style="color:rgb(0,100,145);">TYPE: {{p.pizzaType}}</span>
+    </mat-card-content>
+    
+    <router-outlet></router-outlet>
+    </mat-card>
+</div>
+</body>

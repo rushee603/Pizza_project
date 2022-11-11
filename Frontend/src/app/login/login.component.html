@@ -1,0 +1,26 @@
+<body style=" background-image: url('./assets/background.jpg'); height: 150%; width: 100%; margin-top: -50px;">
+
+    <br><br><br><br><br>
+    <mat-card class="example-card" >
+    <mat-card-title></mat-card-title>
+    <mat-card-content><div>
+    <h2>LOGIN FORM</h2><hr><br><h3>
+    <form [formGroup]="loginform" action="">
+            <mat-form-field appearance="fill">
+                <mat-label>UserId</mat-label>
+                <input matInput type="Name" formControlName="userId">
+                <mat-hint *ngIf="!userId?.valid&& userId?.dirty">Invalid userId</mat-hint><br>                 
+                </mat-form-field>              
+                <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input  matInput type="Password" formControlName="password"> 
+                <mat-hint *ngIf="!password?.valid&& password?.dirty">Invalid password</mat-hint>
+                <mat-hint *ngIf="!password?.valid&& password?.dirty">Must Be 5-10 Letter</mat-hint>
+                </mat-form-field>       
+              <input type="button" value="LOGIN"(click)="login()"  [disabled]="loginform.invalid"/>
+            </form><button mat-flat-button routerLink="registation" (click)="sound()" routerLinkActive="Active" style="margin-left: 225px;">Registration</button></h3>
+                </div> 
+                </mat-card-content>
+                </mat-card>  
+          </body>           
+          

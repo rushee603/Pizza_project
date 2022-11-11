@@ -1,0 +1,12 @@
+img{
+    width: fit-content;   
+    padding-left: 10px;
+}
+
+.mat-raised-button{
+    margin-left: 1170px;
+    margin-bottom: 10px;
+    background-color: rgba(250, 250, 250, 0.747);
+    margin-top: 15px;
+    
+}

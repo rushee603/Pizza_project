@@ -1,0 +1,23 @@
+
+<body style="background-image: url('./assets/pp.jpg'); height: fit-content; width: 100%; margin-top: -20px; ">
+  
+<div fxLayout="row wrap" fxLayout.xs="column"   style="margin-left: 80px;">
+    <div class= "dashboard" *ngFor="let x of pizza" fxFlex="30%">
+    <mat-card class="example-card" style="width: 250px; background-color: rgba(250, 246, 246, 0.726);" >
+    <mat-card-header>    
+    <mat-card-title style="margin-left:40px ;">{{x.pizzaName}}</mat-card-title>    
+    </mat-card-header>
+    <app-img [image]="x?.img"></app-img><hr>
+    <mat-card-content>
+    <h2 style="color:rgb(0,100,145);">ID: {{x.pizzaId}}</h2>
+    <span style="color:rgb(0,100,145);">PRICE:₹{{x.price}}</span><br><br>
+    <span style="color:rgb(0,100,145);">TYPE: {{x.pizzaType}}</span>
+    </mat-card-content>
+    <mat-card-actions>
+    <span style="color:black"> <button mat-button (click)="save(x)">ADD ORDER</button></span>     
+    </mat-card-actions>
+    </mat-card>
+    </div>
+</div>
+  
+</body>

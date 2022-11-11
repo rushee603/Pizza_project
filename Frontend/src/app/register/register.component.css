@@ -1,0 +1,17 @@
+mat-hint {
+  color: rgba(255, 0, 0, 0.664);
+}
+mat-error{
+    color: red;
+}
+
+.example-card {
+    max-width: 450px; 
+   }
+  mat-card {
+    margin-top: 10px;
+    margin-left:650px;
+    height: fit-content;
+    background-color:rgba(255, 255, 255, 0.568);
+    
+  }

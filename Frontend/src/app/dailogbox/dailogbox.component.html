@@ -1,0 +1,7 @@
+<body  class="dashboard" style="background-image: url('./assets/pp.jpg'); height: 700px; width: 100%; margin-top: -20px; ">
+<button  mat-raised-button style="color:rgba(5, 105, 255, 0.582)"  (click)="Placeorder()">ORDER PLACE</button>
+<div fxLayout="row wrap" fxLayout.xs="column"  >
+<div><app-listcard *ngFor="let pizzaId of pizzalist" [pizzaId]="pizzaId" fxFlex="50%"></app-listcard></div>
+</div>
+<router-outlet></router-outlet>
+</body>
